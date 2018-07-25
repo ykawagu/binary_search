@@ -16,20 +16,6 @@ int num(int m){
     return a;
 }
 
-int maxl(){
-    int i, a;
-    a = A[0];
-    for(i = 0; i < n; i++){
-        if(a <= A[i]){
-            a = A[i];
-        }
-        else{
-        }
-    }
-    return a;
-}
-
-
 
 int p(int m){
     return (int) num(m) >= k;
@@ -43,7 +29,7 @@ int main(){
         scanf("%d", &A[i]);
     }
     lb = 0;
-    ub = maxl();
+    ub = 1000000001;
     while(ub-lb > 1){
         int m = (lb+ub)/2;
         if(p(m)){

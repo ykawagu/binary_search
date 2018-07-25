@@ -21,15 +21,6 @@ int bag(int m){
     return a;
 }
 
-int bagmax(){
-    int i, a, b;
-    a = 0;
-    for(i = 0; i < n; i++){
-        b = a + A[i];
-        a = b;
-    }
-    return a;
-}
 
 int p(int m){
     return (int) bag(m) <= k;
@@ -43,7 +34,7 @@ int main(){
         scanf("%d", &A[i]);
     }
     lb = 0;
-    ub = bagmax();
+    ub = 1000000000;
     while(ub-lb > 1){
         int m = (lb+ub)/2;
         if(p(m)){
